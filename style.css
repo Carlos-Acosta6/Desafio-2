@@ -1,0 +1,193 @@
+html {
+    font-size: 62.5%;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    background-color: #0A0C1B;
+    padding: 50px 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #1C1938;
+    border-radius: 10px;
+    color: white;
+}
+
+.image {
+    position: relative;
+
+}
+
+.image::before {
+
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(120, 64, 151, 0.72);
+    border-radius: 10px 10px 0 0;
+
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.info {
+    text-align: center;
+    padding: 25px 20px;
+
+}
+
+.info h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.especial {
+    color: #9B61C5;
+}
+
+p {
+    color: #B4AFC8;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+}
+
+.info>p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 25px;
+}
+
+.estadisticas {
+    text-align: center;
+
+}
+
+.estadisticas h2 {
+    font-size: 2.4rem;
+    line-height: 1.4;
+}
+
+.estadisticas p {
+    font-size: 1.1rem;
+    letter-spacing: 1.3px;
+}
+
+/*TABLETS*/
+
+
+@media screen and (min-width: 481px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #1C1938;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .image {
+        grid-column: 2;
+        grid-row: span 2;
+        overflow: hidden;
+    }
+
+    .image img {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 10px 10px 0;
+
+    }
+
+    .image::before {
+        border-radius: 0 10px 10px 0;
+    }
+
+
+    .info h1 {
+        font-size: 2.7rem;
+    }
+
+    .info>p {
+        font-size: 1.4rem;
+    }
+
+    .estadisticas h2 {
+        font-size: 2.5rem;
+    }
+
+    .estadisticas p {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    body {
+        padding: 30px 50px;
+    }
+
+    .info {
+        padding:  50px 70px;
+    }
+
+    .container-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .info h1 {
+        font-size: 3.5rem;
+        text-align: left;
+        margin-bottom: 28px;
+    }
+
+    .info>p {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .estadisticas h2 {
+        font-size: 2.7rem;
+        text-align: left;
+    }
+
+    .estadisticas p {
+        font-size: 1.4rem;
+    }
+
+}
