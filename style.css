@@ -24,6 +24,7 @@ body {
     background-color: #1C1938;
     border-radius: 10px;
     color: white;
+    max-width: 1200px;
 }
 
 .image {
